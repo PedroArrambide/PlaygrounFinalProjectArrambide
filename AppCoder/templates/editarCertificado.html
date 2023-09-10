@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+
+    <h1>Editar Certificado</h1>
+    
+    {% if miFormulario.errors %}
+    <p style="color: red"> Etan mal los datos, revisar</p>
+    {% endif %}
+
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+
+            {{ miFormulario.as_table}}
+        </table>
+        
+        <input type="submit", value="Enviar">
+    </form>
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+
+    <h1>Cambiar Contraseña </h1>
+    <h6>de Usuario</h6>
+ 
+
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{ form}}
+        </table>
+        <button>Cambiar</button>
+    </form>
+{% endblock contenidoQueCambia %}
